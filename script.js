@@ -5,7 +5,7 @@ const year = document.querySelector("[data-year]");
 const form = document.querySelector("[data-contact-form]");
 const revealItems = document.querySelectorAll(".reveal");
 
-const phoneNumber = "919876543210";
+const phoneNumber = "910000000000";
 
 year.textContent = new Date().getFullYear();
 
@@ -37,7 +37,7 @@ form.addEventListener("submit", (event) => {
   const phone = String(formData.get("phone") || "").trim();
   const message = String(formData.get("message") || "").trim();
 
-  const text = `Hi Orange Fashions, my name is ${name}. Phone: ${phone}. Message: ${message}`;
+  const text = `Hi Orange Fashions, my name is ${name}. Contact: ${phone}. Message: ${message}`;
   window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
   form.reset();
 });
